@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Convertly - Convert Files</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fceabb, #f8b500); /* Updated to match contact.html */
+      color: #333;
+    }
+
+    .topbar {
+      background-color: #ffd700;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid #e5a100;
+    }
+
+    .logo-name {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-name img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .main-nav {
+      background-color: #333;
+      padding: 10px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .main-nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .main-nav ul li {
+      margin: 0 15px;
+    }
+
+    .main-nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      font-size: 1rem;
+      display: inline-block;
+      border-radius: 6px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .main-nav ul li a:hover {
+      background-color: #ffd700;
+      color: #222;
+    }
+
+    .main-content {
+      padding: 60px 20px;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    p {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input[type="file"],
+    select {
+      padding: 10px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+
+    button {
+      padding: 12px;
+      font-size: 1rem;
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.2s ease-in-out;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      background-color: #222;
+      color: #eee;
+    }
+
+    footer a {
+      color: #ddd;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .main-nav ul li {
+        margin: 10px 0;
+      }
+
+      .container {
+        padding: 20px;
+      }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(-10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="logo-name">
+      <img src="logo.png" alt="Logo">
+      <h1>Convertly</h1>
+    </div>
+    <div class="tagline">File Conversion Simplified – Fast, Secure, and Reliable.</div>
+  </div>
+
+  <!-- Navigation Menu -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="convert.html">Convert</a></li>
+      <li><a href="compare.php">Compare</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="container">
+      <h2>Convert Files</h2>
+      <p>Select your file and desired format to convert instantly.</p>
+      <form action="convert.php" method="post" enctype="multipart/form-data">
+        <label>Upload File:</label>
+        <input type="file" name="file" required>
+
+        <label>Convert To:</label>
+        <select name="target_format">
+          <option value="pdf">PDF</option>
+          <option value="jpg">JPG</option>
+          <option value="png">PNG</option>
+          <option value="docx">DOCX</option>
+        </select>
+
+        <button type="submit">Convert Now</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Convertly |
+    <a href="#">Company</a> |
+    <a href="#">About Us</a> |
+    <a href="#">Security</a> |
+    <a href="#">Resources</a> |
+    <a href="#">Blog</a> |
+    <a href="#">Status</a> |
+    <a href="#">Privacy</a> |
+    <a href="#">Terms</a> |
+    <a href="#">Contact</a>
+  </footer>
+
+</body>
+</html>

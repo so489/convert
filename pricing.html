@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Convertly - Pricing</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to right, #fceabb, #f8b500); /* Updated background */
+      color: #333;
+    }
+
+    .topbar {
+      background-color: #ffd700;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid #e5a100;
+    }
+
+    .logo-name {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-name img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      color: #444;
+    }
+
+    .main-nav {
+      background-color: #333;
+      padding: 10px 0;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+
+    .main-nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .main-nav ul li {
+      margin: 0 15px;
+    }
+
+    .main-nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 15px;
+      font-size: 1rem;
+      display: inline-block;
+      border-radius: 6px;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    .main-nav ul li a:hover {
+      background-color: #ffd700;
+      color: #222;
+    }
+
+    .main-content {
+      padding: 60px 20px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2.2rem;
+      margin-bottom: 40px;
+    }
+
+    .pricing-plans {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background: #fff;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+      width: 280px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      opacity: 0;
+      transform: translateY(50px);
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    .price {
+      font-size: 2rem;
+      margin: 20px 0;
+      color: #007bff;
+    }
+
+    .btn {
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      display: inline-block;
+      transition: background 0.2s;
+    }
+
+    .btn:hover {
+      background: #0056b3;
+    }
+
+    .card ul {
+      list-style: none;
+      padding: 0;
+      text-align: left;
+    }
+
+    .card ul li {
+      margin: 8px 0;
+    }
+
+    footer {
+      margin-top: 50px;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      background-color: #222;
+      color: #eee;
+    }
+
+    footer a {
+      color: #ddd;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 15px;
+      }
+
+      .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .main-nav ul li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="logo-name">
+      <img src="logo.png" alt="Logo" />
+      <h1>Convertly</h1>
+    </div>
+    <div class="tagline">Simple Pricing for Powerful Features.</div>
+  </div>
+
+  <!-- Navigation Menu -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="convert.html">Convert</a></li>
+      <li><a href="compare.php">Compare</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Pricing Section -->
+  <div class="main-content">
+    <div class="container">
+      <h2>Choose Your Plan</h2>
+      <div class="pricing-plans">
+        <div class="card">
+          <h3>Free</h3>
+          <p>Perfect for individuals</p>
+          <div class="price">$0/mo</div>
+          <ul>
+            <li>✅ 25 conversions/day</li>
+            <li>❌ Batch conversion</li>
+            <li>❌ Premium tools</li>
+          </ul>
+          <br>
+          <a href="#" class="btn">Get Started</a>
+        </div>
+
+        <div class="card">
+          <h3>Pro</h3>
+          <p>For professionals</p>
+          <div class="price">$5/mo</div>
+          <ul>
+            <li>✅ Unlimited conversions</li>
+            <li>✅ Batch conversion</li>
+            <li>✅ Premium tools</li>
+          </ul>
+          <br>
+          <a href="#" class="btn">Go Pro</a>
+        </div>
+
+        <div class="card">
+          <h3>Enterprise</h3>
+          <p>Custom solutions</p>
+          <div class="price">Custom</div>
+          <ul>
+            <li>✅ Unlimited access</li>
+            <li>✅ API & Support</li>
+            <li>✅ Team licenses</li>
+          </ul>
+          <br>
+          <a href="#" class="btn">Contact Sales</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Convertly |
+    <a href="#">Company</a> |
+    <a href="#">About Us</a> |
+    <a href="#">Security</a> |
+    <a href="#">Resources</a> |
+    <a href="#">Blog</a> |
+    <a href="#">Status</a> |
+    <a href="#">Privacy</a> |
+    <a href="#">Terms</a> |
+    <a href="#">Contact</a>
+  </footer>
+
+  <script>
+    // Animate pricing cards on load
+    const cards = document.querySelectorAll('.card');
+    cards.forEach((card, i) => {
+      setTimeout(() => {
+        card.classList.add('show');
+      }, i * 200);
+    });
+  </script>
+
+</body>
+</html>

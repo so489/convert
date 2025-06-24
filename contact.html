@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Convertly - Contact Us</title>
+  <style>
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle, #fefcea, #f1da36);
+      color: #333;
+    }
+
+    /* Top Bar */
+    .topbar {
+      background-color: #ffd700;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 3px solid #e5a100;
+    }
+
+    .logo-name {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-name img {
+      width: 40px;
+      height: 40px;
+    }
+
+    .tagline {
+      font-size: 1.1rem;
+      color: #333;
+    }
+
+    /* Navigation */
+    .main-nav {
+      background-color: #222;
+      padding: 12px 0;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .main-nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .main-nav ul li {
+      margin: 0 15px;
+    }
+
+    .main-nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 10px 16px;
+      font-size: 1rem;
+      border-radius: 8px;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    .main-nav ul li a:hover {
+      background-color: #fff35c;
+      color: #111;
+      transform: scale(1.05);
+    }
+
+    /* Main Content */
+    .main-content {
+      padding: 60px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 80vh;
+      animation: fadeIn 1s ease;
+    }
+
+    .container {
+      background: white;
+      padding: 40px;
+      max-width: 600px;
+      border-radius: 16px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+      transition: transform 0.4s ease;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #222;
+      font-size: 2rem;
+    }
+
+    form label {
+      display: block;
+      margin-top: 20px;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    textarea {
+      width: 100%;
+      padding: 12px 15px;
+      margin-top: 8px;
+      border: 2px solid #ddd;
+      border-radius: 10px;
+      font-size: 1rem;
+      transition: border-color 0.3s, box-shadow 0.3s;
+    }
+
+    input:focus,
+    textarea:focus {
+      border-color: #007bff;
+      box-shadow: 0 0 10px rgba(0, 123, 255, 0.2);
+      outline: none;
+    }
+
+    button {
+      margin-top: 30px;
+      width: 100%;
+      padding: 14px;
+      font-size: 1.1rem;
+      background-color: #007bff;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    button:hover {
+      background-color: #0056b3;
+      transform: scale(1.03);
+    }
+
+    footer {
+      margin-top: 60px;
+      padding: 20px;
+      text-align: center;
+      font-size: 0.9rem;
+      background-color: #222;
+      color: #eee;
+    }
+
+    footer a {
+      color: #ddd;
+      text-decoration: none;
+      margin: 0 8px;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Popup */
+    .popup {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scale(0.9);
+      background: #fff;
+      padding: 25px 40px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+      text-align: center;
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 0.4s ease;
+    }
+
+    .popup.show {
+      opacity: 1;
+      visibility: visible;
+      transform: translate(-50%, -50%) scale(1);
+    }
+
+    .popup h3 {
+      color: #28a745;
+      margin-bottom: 10px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 25px;
+      }
+
+      .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .main-nav ul li {
+        margin: 10px 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Topbar -->
+  <div class="topbar">
+    <div class="logo-name">
+      <img src="logo.png" alt="Logo" />
+      <h1>Convertly</h1>
+    </div>
+    <div class="tagline">We're Here to Help You Anytime.</div>
+  </div>
+
+  <!-- Navigation Menu -->
+  <nav class="main-nav">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="tools.html">Tools</a></li>
+      <li><a href="convert.html">Convert</a></li>
+      <li><a href="compare.php">Compare</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Content -->
+  <div class="main-content">
+    <div class="container">
+      <h2>📬 Contact Us</h2>
+      <form onsubmit="event.preventDefault(); showPopup();">
+        <label>Your Name:</label>
+        <input type="text" name="name" required />
+
+        <label>Your Email:</label>
+        <input type="email" name="email" required />
+
+        <label>Message:</label>
+        <textarea name="message" rows="6" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Popup Message -->
+  <div class="popup" id="popupBox">
+    <h3>🎉 Thank you!</h3>
+    <p>Your message has been received. We'll get back to you soon.</p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    © 2025 Convertly |
+    <a href="#">Company</a> |
+    <a href="#">About Us</a> |
+    <a href="#">Security</a> |
+    <a href="#">Resources</a> |
+    <a href="#">Blog</a> |
+    <a href="#">Status</a> |
+    <a href="#">Privacy</a> |
+    <a href="#">Terms</a> |
+    <a href="#">Contact</a>
+  </footer>
+
+  <!-- Script for Popup -->
+  <script>
+    function showPopup() {
+      const popup = document.getElementById('popupBox');
+      popup.classList.add('show');
+      setTimeout(() => {
+        popup.classList.remove('show');
+      }, 4000);
+    }
+  </script>
+
+</body>
+</html>

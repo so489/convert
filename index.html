@@ -413,23 +413,19 @@
   | <a href="#">Terms of Service</a>
   | Contact: <a href="mailto:support@convertly.com">support@convertly.com</a>
 </footer>
-
-<!-- Script -->
 <script>
   const menu = document.getElementById("popupMenu");
   const hamburger = document.querySelector(".hamburger");
 
-  // Open menu on mouse enter
+  // Hamburger menu logic
   hamburger.addEventListener("mouseenter", () => {
     menu.style.left = "0px";
   });
 
-  // Close menu on mouse leave from the whole menu container
   menu.addEventListener("mouseleave", () => {
     menu.style.left = "-250px";
   });
 
-  // Optional: Also close if mouse leaves hamburger and doesn't enter menu
   hamburger.addEventListener("mouseleave", () => {
     setTimeout(() => {
       if (!menu.matches(":hover")) {
@@ -438,16 +434,42 @@
     }, 400);
   });
 
-  // For touch devices: toggle by click
   hamburger.addEventListener("click", () => {
     menu.style.left = menu.style.left === "0px" ? "-250px" : "0px";
   });
 
-  // Close via × button
   function toggleMenu() {
     menu.style.left = "-250px";
   }
+
+  // ✅ Toggle file type-specific options
+  function toggleFormatOptions(value) {
+    const imageOptions = document.getElementById("imageOptions");
+    const docOptions = document.getElementById("docOptions");
+
+    if (value === "image") {
+      imageOptions.style.display = "block";
+      docOptions.style.display = "none";
+    } else if (value === "document") {
+      imageOptions.style.display = "none";
+      docOptions.style.display = "block";
+    } else {
+      imageOptions.style.display = "none";
+      docOptions.style.display = "none";
+    }
+  }
+
+  // ✅ Toggle custom size inputs for image resizing
+  function toggleCustomSize(value) {
+    const customSizeDiv = document.getElementById("customSize");
+    if (value === "custom") {
+      customSizeDiv.style.display = "block";
+    } else {
+      customSizeDiv.style.display = "none";
+    }
+  }
 </script>
+
 
 
 </body>
